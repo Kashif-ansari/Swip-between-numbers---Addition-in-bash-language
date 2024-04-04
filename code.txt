@@ -1,0 +1,162 @@
+#!/bin/bash
+echo "Hello world"
+echo "Enter your Name"
+read name
+echo $name
+greeting="Welcome"
+user=$(whoami)
+day=$(date+%A)
+echo "$greeting back $user! today is $day, which is the best day of entire week!"
+
+
+#!/bin/bash
+echo "Hello world"
+echo "Enter your 1 Number"
+read num
+echo "Enter your 2 Number"
+read num2
+
+plus=$[num+num2]
+echo $plus
+n=23
+b=23
+if[ $n-eq$b]
+then
+echo "num1 is equal to num2"
+else
+echo "num1 is not equal to num2"
+fi
+
+
+a=10
+b=20
+if[$a-eq$b]
+then
+echo"a is equal to b"
+else echo"a is not equal to b"
+fi
+
+
+#!/bin/bash
+echo "Hello world"
+for((i=0;i<5;i++))
+do
+echo "Looping number $i"
+done
+i=0
+while [ $i -lt 10 ]
+do
+echo "value of is $i"
+i=$(($i+1))
+done
+
+#!/bin/bash
+echo "Hello world"
+for((i=0;i<5;i++))
+do
+echo "Looping number $i"
+done
+i=0
+while [ $i -lt 10 ]
+do
+echo "value of is $i"
+i=$(($i+1))
+done
+
+input="hello"
+while [ $input != "bye" ]
+do
+echo "Please type bye to quit"
+read input
+echo "you type: $input"
+done
+
+#!/bin/bash
+echo "Hello world"
+
+echo "Please enter number 1"
+read num
+echo "Please enter number 2"
+read num2
+echo "Please Enter 1 to add 2 to subtract 3 to multiply 4 to divide"
+read opt
+
+if [ $opt -eq 1 ]
+then
+result=$((num+num2))
+
+
+elif [ $opt -eq 2 ]
+then
+result=$((num-num2))
+
+elif [ $opt -eq 3 ]
+then
+result=$((num*num2))
+
+elif [ $opt -eq 4 ]
+then
+result=$((num/num2))
+fi
+echo "$result"
+
+
+
+#!/bin/bash
+echo "Hello world"
+
+echo "Please enter number 1"
+read num
+echo "Please enter number 2"
+read num2
+
+echo "Swapping"
+num=$((num-num2))
+num2=$((num+num2))
+num=$((num2-num))
+
+echo $num
+echo $num2
+
+
+echo "Please enter number 1"
+read num
+echo "Please enter number 2"
+read num2
+if [ $num -le $num2 ]
+then
+while [ $num -ne $num2 ]
+do
+echo "printing number 1 $num"
+num=$((num+1))
+done
+else
+while [ $num -ne $num2 ]
+do
+echo "printing number 1 $num"
+num=$((num-1))
+done
+fi
+
+#!/bin/bash
+echo "Hello world"
+
+echo "Task 1"
+
+echo "Please enter number 1"
+read num
+echo "Please enter number 2"
+read num2
+if [ $num -gt $num2 ]
+then
+num=$((num-num2))
+num2=$((num+num2))
+num=$((num2-num))
+fi
+
+while [ $num -ne $num2 ]
+do
+echo "printing number 1 $num"
+num=$((num+1))
+done
+
